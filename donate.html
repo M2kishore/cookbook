@@ -1,6 +1,14 @@
 <html>
 
 <head>
+    <script>
+        function tex(){
+            elm = document.getElementById("tex");
+            if(!isNaN(elem.innerText())){
+                window.alert("Enter number");
+            }
+        }
+    </script>
     <style>
         @import url(stylesheet.css);
     </style>
@@ -20,9 +28,9 @@
         <article style="float: inline-end;padding-right: 100px;">
             DONATE <span class="green">HERE</span><br>
             <center>ENTER <span class="green">AMOUNT:</span></center><br>
-            <input type="text" style="color: black;"><br>
+            <input type="text" style="color: black;" id="tex"<br>
             <br>
-            <a href="" class="button green">Donate!</a>
+            <a href="" class="button green" onsubmit="tex()">Donate!</a>
         </article>
     </section>
 
