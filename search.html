@@ -3,17 +3,17 @@
     <script>
         function myFunction() {
           // Declare variables
-          var input, filter, ul, li, a, i, txtValue;
-          input = document.getElementById('myInput');
-          filter = input.value.toUpperCase();
-          ul = document.getElementById("myUL");
+          var input, caps, ul, li, a, i, txtValue;
+          input = document.getElementById('SearchInput');
+          caps = input.value.toUpperCase();
+          ul = document.getElementById("contents");
           li = ul.getElementsByTagName('li');
+         
         
-          // Loop through all list items, and hide those who don't match the search query
           for (i = 0; i < li.length; i++) {
             a = li[i].getElementsByTagName("a")[0];
             txtValue = a.textContent || a.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            if (txtValue.toUpperCase().indexOf(caps) > -1) {
               li[i].style.display = "";
             } else {
               li[i].style.display = "none";
@@ -35,38 +35,33 @@
 </head>
 <style>
 
-#myInput {
-  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
-  background-position: 10px 12px; /* Position the search icon */
-  background-repeat: no-repeat; /* Do not repeat the icon image */
-  width: 90%; /* Full-width */
-  font-size: 16px; /* Increase font-size */
-  padding: 12px 20px 12px 10px; /* Add some padding */
-  border: 1px solid #ddd; /* Add a grey border */
-  margin-bottom: 12px; /* Add some space below the input */
+#SearchInput {
+  background-position: 10px 12px; 
+  background-repeat: no-repeat; 
+  width: 90%; 
+  font-size: 16px;
+  padding: 12px 20px 12px 10px; 
+  border: 1px solid #ddd; 
+  margin-bottom: 12px;
 }
 
-#myUL {
-  /* Remove default list styling */
+#contents {
+
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-#myUL li a {
-  border: 1px solid #ddd; /* Add a border to all links */
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6; /* Grey background color */
-  padding: 12px; /* Add some padding */
-  text-decoration: none; /* Remove default text underline */
-  font-size: 18px; /* Increase the font-size */
-  color: black; /* Add a black text color */
-  display: block; /* Make it into a block element to fill the whole list */
+#contents li a {
+  border: 1px solid #ddd; 
+  margin-top: -1px;
+ background: #2F3534;
+  padding: 12px; 
+  text-decoration: none;
+  font-size: 18px; 
+  color:72b01d; 
+  display: block; 
   width: 90% ;
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee; /* Add a hover effect to all links, except for headers */
 }
 
     @import url(stylesheet.css);
@@ -119,16 +114,16 @@
     <section>
         <nav>
             <ul type="square">
-                <li><a href="contents.html"><strong class="green">HOME</strong> </a></li><br>
-                <li><a href="copy file1.html"><strong class="green">BAMBOO BIRIYANI</strong></a></li><br>
-                <li><a href="aboutus.html"><strong class="green">ABOUT US</strong></a></li><br>
-                <li><a href="donate.html"><strong class="green">DONATE</strong></a></li>
+                <li style="color: 72b01d;"><a href="contents.html"><strong style="color: 72b01d;">HOME</strong> </a></li><br>
+                <li style="color: 72b01d;"><a href="copy file1.html"><strong style="color: 72b01d;">BAMBOO BIRIYANI</strong></a></li><br>
+                <li style="color: 72b01d;"><a href="aboutus.html"><strong style="color: 72b01d;">ABOUT US</strong></a></li><br>
+                <li style="color: 72b01d;"><a href="donate.html"><strong style="color: 72b01d;">DONATE</strong></a></li>
             </ul>
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+            <input type="text" id="SearchInput" onkeyup="myFunction()" placeholder="Search for Recipies">
 
-            <ul id="myUL">
-              <li><a href="#">Bamboo Chicken</a></li>
-              <li><a href="#">Tandoori</a></li>
+            <ul id="contents">
+              <li><a href="copy file1.html">Bamboo Chicken</a></li>
+              <li><a href="final.html">Tandoori</a></li>
             </ul>
         </nav>
 
