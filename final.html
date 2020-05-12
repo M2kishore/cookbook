@@ -11,35 +11,6 @@
 
 </head>
 <style>
-#SearchInput {
-  background-position: 10px 12px; 
-  background-repeat: no-repeat; 
-  width: 90%; 
-  font-size: 16px;
-  padding: 12px 20px 12px 10px; 
-  border: 1px solid #ddd; 
-  margin-bottom: 12px;
-}
-
-#contents {
-
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#contents li a {
-  border: 1px solid #ddd; 
-  margin-top: -1px;
- background: #2F3534;
-  padding: 12px; 
-  text-decoration: none;
-  font-size: 18px; 
-  color:72b01d; 
-  display: block; 
-  width: 90% ;
-}
-
     @import url(stylesheet.css);
     * {
         box-sizing: border-box;
@@ -77,28 +48,58 @@
         background-color: black;
         height: 2500px;
     }
+
+    #SearchInput {
+  background-position: 10px 12px; 
+  background-repeat: no-repeat; 
+  width: 90%; 
+  font-size: 16px;
+  padding: 12px 20px 12px 10px; 
+  border: 1px solid #ddd; 
+  margin-bottom: 12px;
+}
+
+#contents {
+
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#contents li a {
+  border: 1px solid #ddd; 
+  margin-top: -1px;
+ background: #2F3534;
+  padding: 12px; 
+  text-decoration: none;
+  font-size: 18px; 
+  color:72b01d; 
+  display: block; 
+  width: 90% ;
+}
 </style>
 </head>
-<script>
-    function myFunction() {
-      var input, caps, ul, li, a, i, txtValue;
-      input = document.getElementById('SearchInput');
-      caps = input.value.toUpperCase();
-      ul = document.getElementById("contents");
-      li = ul.getElementsByTagName('li');
-     
-    
-      for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(caps) > -1) {
-          li[i].style.display = "";
-        } else {
-          li[i].style.display = "none";
+    <script>
+        function myFunction() {
+          // Declare variables
+          var input, caps, ul, li, a, i, txtValue;
+          input = document.getElementById('SearchInput');
+          caps = input.value.toUpperCase();
+          ul = document.getElementById("contents");
+          li = ul.getElementsByTagName('li');
+         
+        
+          for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(caps) > -1) {
+              li[i].style.display = "";
+            } else {
+              li[i].style.display = "none";
+            }
+          }
         }
-      }
-    }
-</script>
+    </script>
 
 <body>
 
