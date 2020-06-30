@@ -1,3 +1,3 @@
-include search bar
-input number only in donate text box
-category selection using ID and tags
+This is case-study project for sem-2 CSE
+the page is published: https://m2kishore.github.io/cookbook
+Enjoy!
